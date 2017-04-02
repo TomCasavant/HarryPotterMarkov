@@ -1,0 +1,7 @@
+markovify==0.5.4
+oauthlib==2.0.1
+pkg-resources==0.0.0
+requests==2.12.5
+requests-oauthlib==0.7.0
+twython==3.4.0
+Unidecode==0.4.20
