@@ -73,6 +73,13 @@ class User():
 
 
 if __name__ == '__main__':
+	parser = SafeConfigParser()
+	parser.read("config.ini")
+	consumer_key = parser.get("twitter", "CONSUMER_KEY")
+	consumer_token = parser.get("twitter", "CONSUMER_TOKEN")
+	access_key = parser.get("twitter", "ACCESS_KEY")
+	access_token = parser.get("twitter", "ACCESS_TOKEN")
+
 	Tom = User(consumer_key, consumer_token, access_key, access_token) #Authenticates my account
 	if Tom.followers >= 200:
 		Tom.unfollow() #If my account is following over 200 people, start unfollowing users
